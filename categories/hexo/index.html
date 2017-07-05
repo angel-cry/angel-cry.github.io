@@ -422,7 +422,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1009,7 +1009,7 @@
       this.y = y;
       this.r = Math.floor(Math.random()*2)+1;
       var alpha = (Math.floor(Math.random()*10)+1)/10/2;
-      this.color = "rgba(0,0,0,"+alpha+")";
+      this.color = "rgba(255,255,255,"+alpha+")";
     }
 
     Star.prototype.draw = function() {
@@ -1042,8 +1042,8 @@
       this.speed = .5;
       this.a = .5;
       this.aReduction = .005;
-      this.color = "rgba(0,0,0,"+this.a+")";
-      this.linkColor = "rgba(0,0,0,"+this.a/4+")";
+      this.color = "rgba(255,255,255,"+this.a+")";
+      this.linkColor = "rgba(255,255,255,"+this.a/4+")";
 
       this.dir = Math.floor(Math.random()*140)+200;
     }
@@ -1085,8 +1085,8 @@
         this.die();
         return
       }
-      this.color = "rgba(0,0,0,"+this.a+")";
-      this.linkColor = "rgba(0,0,0,"+this.a/4+")";
+      this.color = "rgba(255,255,255,"+this.a+")";
+      this.linkColor = "rgba(255,255,255,"+this.a/4+")";
       this.x = this.x + Math.cos(degToRad(this.dir))*this.speed,
       this.y = this.y + Math.sin(degToRad(this.dir))*this.speed;
 
@@ -1126,8 +1126,8 @@
     }
 
     function init() {
-      ctx.strokeStyle = "black";
-      ctx.shadowColor = "black";
+      ctx.strokeStyle = "white";
+      ctx.shadowColor = "white";
       for (var i = 0; i < initStarsPopulation; i++) {
         stars[i] = new Star(i, Math.floor(Math.random()*WIDTH), Math.floor(Math.random()*HEIGHT));
         //stars[i].draw();
