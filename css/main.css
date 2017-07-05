@@ -1677,7 +1677,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b90f9e;
+  background: #f4576e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2838,34 +2838,26 @@ hr {
 }
 a {
   color: #f9f9f9;
-  text-decoration: none;
-  border-bottom: 1px solid #999;
-  word-wrap: break-word;
   border-bottom-color: #f9f9f9;
 }
 a:hover {
   color: #87daff;
-  text-decoration: none;
-  border-bottom: 1px solid #999;
-  word-wrap: break-word;
   border-bottom-color: #87daff;
 }
 .menu .menu-item a:hover {
   color: #87daff;
-  text-decoration: none;
-  border-bottom: 1px solid #999;
-  word-wrap: break-word;
-  border-bottom-color: #87daff;
   background: transparent;
 }
-.links-of-author a:hover {
-  color: #87daff;
-}
+.links-of-author a:hover,
 .site-state-item a:hover {
   color: #87daff;
 }
 .footer {
   color: #fff;
+}
+.footer-inner {
+  margin: 0 auto;
+  text-align: center;
 }
 body {
   color: #fff;
