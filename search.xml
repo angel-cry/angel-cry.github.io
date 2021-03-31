@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Vercel]]></title>
+    <url>%2FVercel.html</url>
+    <content type="text"><![CDATA[发现个好东西Vercel,拥有全球CDN，国内速度不错,可以用来加速github的访问速度。 Vercel如果你曾听说过 ZEIT Now，是的，它是 Vercel 的前身。在今年早些时候，ZEIT Now 进行了「品牌升级」，成为了现在的 Vercel。。如果你的博客和我一样搭建在github上的，那么用Vercel来加速一下，是真的香！ 使用 打开 官网，你可以使用github账号来关联登录。 在Overview选项页，点击【New Project】 在Improt Git Repository 上添加要导入的项目，并点击Import。 接着选择你的账户 继续 再点击Deploy,就开始构建了 构建完成后你就可以通过vercel自动配置的子域名访问了。 设置域名 点击你创建的项目，进入配置界面，点击Settings-&gt;Domains,输入想设置的域名，点击Add. Add之后，可能还需要配置一下我们的域名解析 打开域名管理器，添加一条CNAME记录。 添加成功后，我们回来卡片就会变成如图的样子 现在你就可以通过设置的域名来访问了。需要更新网站的时候，只需要往github上提交新的commit,vercel就会自动重新构建，解放双手，值得拥有~]]></content>
+      <categories>
+        <category>托管</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>托管</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Charles]]></title>
     <url>%2FCharles.html</url>
     <content type="text"><![CDATA[最近玩了一下我要当皇上小游戏，用了一下Charles,刚好可以记录一下Charles. CharlesCharles是一款用于HTTP信息抓包工具，可以快速有效的获得HTTP信息，非常利于开发者的网页开发和调试修改等！Charles 有着可视化的操作界面，非常利用编辑者的使用和调试！ 安装家里有矿的朋友们直接买正版软件就好了。至于破解版，大家可以上网搜，很多的，这里就不放链接了，不然更新版本可能对应不上。 常见问题比如抓包https的没有问题，enable ssl的时候出现unknown消息，disable ssl的时候出现乱码。解决办法：在设置–&gt;通用–&gt;关于本机–&gt;证书信任设置把里面的那个Charles的证书设置为信任就可以了。 实战用例这里就以微信小游戏《我要当皇上》来演示，因为这个是没有加密的，容易点。先放一张刚开始的游戏界面：然后再来一张刷完后的好对比：怎么做到的呢，跟着下面的步骤一步一步来做。首先打开我们的主角Charles,分别点击图中红色框内的按钮，安装一下电脑和手机的证书。 在点击第二个框的时候，会弹出一个提示框，此时我们将手机连入到和电脑相同的WIFI中，并点开此WIFI的详情然后点开代理然后根据之前的弹框提示，设置服务器和端口然后用苹果手机自带的safari浏览器，打开chls.pro/ssl 这个地址，安装描述文件安装描述文件后，到通用-设备管理-找到刚刚安装的描述文件，并信任他。还有通用-》关于本机-》证书信任设置（必须勾选上） 如果您浏览器打不开，没有网，不要慌。你看看你电脑上是否出现过一次提示，让你选择Allow或Deny的，你选择Allow就可以正常连接了。如果一直没有，你可以忘记该网络，重新设置一遍。然后，为了更好的抓包，我们需要再设置一个地方,proxy setting 在打开小游戏前，我们先清空一下charles左侧乱七八糟的请求,然后我们会发现我们抓到的请求里面是unknown，识别不出来。怎么办呢，我们可以到SSL Proxying Settings中把这些请求域名添加上，端口是443。设置好后我们发现有数据了，而且还是明文的，开心吧。 现在我们离成功不远了，先来分析一下数据。12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970&#123; "saveTime": 1560190247689,//保存时间 "coin": "260604",//每秒多少金币 "diamon": 250,//砖石数目 "shopLevel": 2,//商店等级,可以改到37 "isNewPlayer": false,//是否为新玩家？ "speedup": 1,//加速等级 "upStartTime": 1560190246689,//更新时间 "loginDays": 1,//登录天数？ "loginRewardDays": 1,//奖励天数 "lastLoginTime": 1560183238103,//最后登录时间 "guideStep": 4,//向导步骤 "friendDraw": 0, "shareCoinNum": 0, "shareDiamonNum": 0, "luckyCount": 0, "luckyShareCount": 0, "luckyUpTime": 0, "dbVersion": 4706,//数据库版本，必改 "version": "1.4.0", //以下就是3*4的十二宫格内容了，从0开始到11，37为满级，pos代表角色位置 "slots": [&#123; "id": 1, "pos": 0 &#125;, &#123; "id": 2, "pos": 1 &#125;, &#123; "id": 1, "pos": 2 &#125;, &#123; "id": 1, "pos": 3 &#125;, &#123; "id": 1, "pos": 4 &#125;, &#123; "id": 1, "pos": 5 &#125;, &#123; "id": 1, "pos": 6 &#125;, &#123; "id": 1, "pos": 7 &#125;, &#123; "id": 1, "pos": 8 &#125;], //以下就是商店中可买的角色 "items": [&#123; "id": 1, "buyUnlock": 1,//为1时，可买 "diamonUnlock": 0,//为1时，可钻石买 "coinUnlock": 1,// 为1时，可金币购买 "coinCount": 10,// 使用金币购买累计次数 "diamonCount": 0// 使用钻石购买累计次数 &#125;, &#123; "id": 2, "buyUnlock": 1, "diamonUnlock": 0, "coinUnlock": 0, "coinCount": 0, "diamonCount": 0 &#125;], "shareGrop": null, "isFly": 0,// 是否飞升 "userid": "10ae2ff379-1911-47c9-8334-0dbff4dc4ec7", "openId": "ovKTi5FQEmxcYXrzMeJFnrKBIunQ"&#125; OK,多点几次后，我们会发现每次关闭小游戏的时候，他会调用saveUserData这个请求。那么我们就对这个请求进行操作。右键compose,或者点击上放到按钮都行，接着修改我们想要修改的数据，并发送。 好了，已经改完了，膨胀起来。反正都是明文的，我们随心所欲的改就好了，唯一注意点就是最好是关闭游戏后再发送数据。最后来两张最终图。]]></content>
